@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.container {
+  width: 1440px;
+}
+
+@import url('/fonts/Alata-Regular.ttf');
+@import url('/fonts/JosefinSans-Regular.ttf');
+
+$josefin: 'Josefin Sans',
+sans-serif;
+$alata: 'Alata',
+sans-serif;
+
+
+@mixin p-font {
+  font-family: $josefin;
+  font-size: 2rem;
+}
+
+@mixin h2-font {
+  font-family: $alata;
+  font-size: 4rem;
+}
+
+@mixin creative-p-font {
+  font-family: $alata;
+  position: absolute;
+  bottom: 30px;
+  font-size: 2.2rem;
+  color: white;
+}
+
+
+
+header {
+  background-image: url('/images/desktop/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+
+  nav {
+    padding-top: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+    min-height: 20vh;
+
+    ul {
+      li {
+        a {
+          position: relative;
+          display: block;
+          transition: 0.5s;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            background: #ffffff;
+            transform: scaleX(0);
+            transition: transform 0.5s;
+            transform-origin: right;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-title {
+    max-width: fit-content;
+    border: 1px solid white;
+
+    h1 {
+      font-family: 'Alata', sans-serif;
+      font-size: 5rem;
+      display: inline;
+    }
+  }
+
+
+}
+
+#interactive {
+  min-height: 80vh;
+  position: relative;
+
+  .container {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr;
+    grid-template-rows: 1 1 1;
+
+
+    img {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    .interactive-text {
+      grid-column: 2 / span 3;
+      grid-row: 2 / span 1;
+
+      span {
+        @include h2-font();
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+#creations {
+  .creations-title {
+    h2 {
+      @include h2-font();
+    }
+
+    span {
+      cursor: pointer;
+      background-color: black;
+    }
+  }
+
+  .creations {
+
+    .first-image,
+    .second-image,
+    .third-image,
+    .fourth-image,
+    .fifth-image,
+    .sixth-image,
+    .seventh-image,
+    .eigth-image {
+      position: relative;
+      width: max-content;
+
+      &:hover {
+        cursor: pointer;
+
+        img {
+          opacity: 0.2;
+          transition: opacity 0.15s ease-in;
+        }
+
+        p {
+          color: black;
+        }
+      }
+
+      p {
+        @include creative-p-font();
+      }
+    }
+  }
+}
+
+footer {
+  background-color: black;
+
+  .container {
+    min-height: 20vh;
+    color: white;
+
+    #footer-group {
+      min-height: 15vh;
+
+      #second-row {
+        ul {
+          li {
+            a {
+              position: relative;
+              display: block;
+              transition: 0.5s;
+
+              &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                top: 100%;
+                left: 0;
+                background: #ffffff;
+                transform: scaleX(0);
+                transition: transform 0.5s;
+                transform-origin: right;
+              }
+
+              &:hover::after {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+            }
+          }
+        }
+      }
+
+      p {
+        color: hsl(0, 0%, 41%);
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+@import url("/fonts/Alata-Regular.ttf");
+@import url("/fonts/JosefinSans-Regular.ttf");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+}
+
+.container {
+  width: 1440px;
+}
+
+header {
+  background-image: url("/images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+}
+
+header nav {
+  padding-top: 3rem;
+  font-family: 'Josefin Sans', sans-serif;
+  min-height: 20vh;
+}
+
+header nav ul li a {
+  position: relative;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+header nav ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+header .hero-title {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: 1px solid white;
+}
+
+header .hero-title h1 {
+  font-family: 'Alata', sans-serif;
+  font-size: 5rem;
+  display: inline;
+}
+
+#interactive {
+  min-height: 80vh;
+  position: relative;
+}
+
+#interactive .container {
+  padding-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 3fr;
+      grid-template-columns: 2fr 1fr 3fr;
+  -ms-grid-rows: 1 1 1;
+      grid-template-rows: 1 1 1;
+}
+
+#interactive .container img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+#interactive .container .interactive-text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / span 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+}
+
+#interactive .container .interactive-text span {
+  font-family: "Alata", sans-serif;
+  font-size: 4rem;
+}
+
+#interactive .container .interactive-text p {
+  font-size: 1.3rem;
+}
+
+#creations .creations-title h2 {
+  font-family: "Alata", sans-serif;
+  font-size: 4rem;
+}
+
+#creations .creations-title span {
+  cursor: pointer;
+  background-color: black;
+}
+
+#creations .creations .first-image,
+#creations .creations .second-image,
+#creations .creations .third-image,
+#creations .creations .fourth-image,
+#creations .creations .fifth-image,
+#creations .creations .sixth-image,
+#creations .creations .seventh-image,
+#creations .creations .eigth-image {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#creations .creations .first-image:hover,
+#creations .creations .second-image:hover,
+#creations .creations .third-image:hover,
+#creations .creations .fourth-image:hover,
+#creations .creations .fifth-image:hover,
+#creations .creations .sixth-image:hover,
+#creations .creations .seventh-image:hover,
+#creations .creations .eigth-image:hover {
+  cursor: pointer;
+}
+
+#creations .creations .first-image:hover img,
+#creations .creations .second-image:hover img,
+#creations .creations .third-image:hover img,
+#creations .creations .fourth-image:hover img,
+#creations .creations .fifth-image:hover img,
+#creations .creations .sixth-image:hover img,
+#creations .creations .seventh-image:hover img,
+#creations .creations .eigth-image:hover img {
+  opacity: 0.2;
+  -webkit-transition: opacity 0.15s ease-in;
+  transition: opacity 0.15s ease-in;
+}
+
+#creations .creations .first-image:hover p,
+#creations .creations .second-image:hover p,
+#creations .creations .third-image:hover p,
+#creations .creations .fourth-image:hover p,
+#creations .creations .fifth-image:hover p,
+#creations .creations .sixth-image:hover p,
+#creations .creations .seventh-image:hover p,
+#creations .creations .eigth-image:hover p {
+  color: black;
+}
+
+#creations .creations .first-image p,
+#creations .creations .second-image p,
+#creations .creations .third-image p,
+#creations .creations .fourth-image p,
+#creations .creations .fifth-image p,
+#creations .creations .sixth-image p,
+#creations .creations .seventh-image p,
+#creations .creations .eigth-image p {
+  font-family: "Alata", sans-serif;
+  position: absolute;
+  bottom: 30px;
+  font-size: 2.2rem;
+  color: white;
+}
+
+footer {
+  background-color: black;
+}
+
+footer .container {
+  min-height: 20vh;
+  color: white;
+}
+
+footer .container #footer-group {
+  min-height: 15vh;
+}
+
+footer .container #footer-group #second-row ul li a {
+  position: relative;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer .container #footer-group #second-row ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+footer .container #footer-group #second-row ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+footer .container #footer-group p {
+  color: dimgray;
+}
+/*# sourceMappingURL=style.css.map */
